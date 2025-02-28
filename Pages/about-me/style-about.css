@@ -5,6 +5,11 @@
 
 body {
     background-color: #FFDBDB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 .image-top-left {
@@ -43,7 +48,6 @@ body {
     border-radius: 8px;
     position: relative;
     max-width: 80%;
-    margin: 12% auto;
     width: 42%
 }
 
