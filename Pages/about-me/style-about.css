@@ -3,6 +3,11 @@
     src: url('../../fonts/Kapakana.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Jomhuria';
+    src: url('../../fonts/Jomhuria.ttf') format('truetype');
+}
+
 body {
     background-color: #FFDBDB;
     display: flex;
@@ -12,6 +17,14 @@ body {
     flex-direction: column;
 }
 
+.image-top-right {
+    position: absolute;
+    top: -2%;
+    left: 90%;
+    margin: 0px;
+    width: 10%;
+}
+
 .image-top-left {
     position: absolute;
     top: -12%;
@@ -19,22 +32,23 @@ body {
     transform: rotateX(15deg);
     margin: 0px;
     width: 25%;
+    transform-origin: top center;
     animation: swing 3s infinite ease-in-out;
 }
 
 @keyframes swing {
-    0% { transform: rotate(-15deg) translateX(0); }
-    50% { transform: rotate(-15deg) translateX(10px); }
-    100% { transform: rotate(-15deg) translateX(0); }
+    0% { transform: rotate(10deg) translateX(0); }
+    50% { transform: rotate(-10deg) translateX(10px); }
+    100% { transform: rotate(10deg) translateX(0); }
 }
 
 .text-container {
-    position: absolute;
     text-align: center;
+    position: absolute;
     left: 39%;
     top: 0%;
     align-content: center;
-    font-size: 2em
+    font-size: 2em;
 }
 
 .titre2 {
@@ -44,13 +58,69 @@ body {
 .content-box {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 1%;
     border-radius: 8px;
     position: relative;
     max-width: 80%;
-    width: 42%
+    width: 42%;
+    bottom: 12%;
+    left: 20%;
+    font-family: 'Jomhuria', sans-serif; /* Appliquer la police Jomhuria */
+    font-size: 2em;
 }
 
+.tape-right {
+    position: absolute;
+    top: -31%;
+    right: -2%;
+    width: 26%;
+    transform: rotate(50deg);
+}
+
+.tape-left {
+    position: absolute;
+    top: 50%;
+    left: -18%;
+    width: 26%;
+    transform: rotate(50deg);
+}
+
+.title1 {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-size: 3.5em;
+    margin: 0.1%;
+}
+
+.exp1 {
+    position: absolute;
+    top: -2em;
+    left: 0em;
+    width: 16em;
+    line-height: 108%;
+}
+
+.text1 {
+    font-family: 'Jomhuria', sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    margin: 0.1%;
+    font-size: 2em;
+}
+
+.eticket {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 0px;
+    height: 0px;
+}
+
+.ticket1 {
+    height: 70em;
+}
 
 /* Styles pour les écrans de taille moyenne */
 @media (min-width: 768px) {
