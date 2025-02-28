@@ -16,29 +16,48 @@ window.addEventListener('scroll', function() {
     }
 });
 
+let imagesVisible = false;
+
 document.querySelector('.bag1').addEventListener('click', function() {
     const bag1 = document.querySelector('.bag1');
     const images = document.querySelectorAll('.presentation1 img');
     const linkbag = document.querySelector('.linkbag');
     
-    linkbag.style.display = 'block'; // Afficher le conteneur des images
-
     const bag1Rect = bag1.getBoundingClientRect();
     const positions = [
-        { top: bag1Rect.top, left: bag1Rect.left - 100 }, // Position gauche pour logo1
-        { top: bag1Rect.top + 100, left: bag1Rect.left - 100 }, // Position gauche pour logo2
-        { top: bag1Rect.top + 200, left: bag1Rect.left - 100 }, // Position gauche pour logo3
-        { top: bag1Rect.top, left: bag1Rect.right + 50 }, // Position droite pour logo4
-        { top: bag1Rect.top + 100, left: bag1Rect.right + 50 }, // Position droite pour logo5
-        { top: bag1Rect.top + 200, left: bag1Rect.right + 50 } // Position droite pour logo6
+        { top: '-37em', left: '20%' }, // Position pour logo1
+        { top: '-15em', left: '14%' }, // Position gauche pour logo2
+        { top: '+8em', left: '17%' }, // Position gauche pour logo3
+        { top: '-35em', left: '80%' }, // Position droite pour logo4
+        { top: '-17em', left: '85%' }, // Position droite pour logo5
+        { top: '7em', left: '77%' } // Position droite pour logo6
     ];
 
-    images.forEach((img, index) => {
+    if (!imagesVisible) {
+        linkbag.style.display = 'block'; // Afficher le conteneur des images
+
+        images.forEach((img, index) => {
+            setTimeout(() => {
+                img.style.opacity = 1; // Afficher l'image
+                img.style.transform = `translate(-50%, -50%) scale(1)`; // Appliquer l'effet de zoom
+                img.style.top = positions[index].top;
+                img.style.left = positions[index].left;
+            }, index * 100); // Délai pour chaque image
+        });
+    } else {
+        images.forEach((img, index) => {
+            setTimeout(() => {
+                img.style.opacity = 0; // Masquer l'image
+                img.style.transform = `translate(-50%, -50%) scale(0.7)`; // Réduire la taille
+                img.style.top = `${bag1Rect.top + bag1Rect.height / 2}px`; // Centrer verticalement
+                img.style.left = `${bag1Rect.left + bag1Rect.width / 2}px`; // Centrer horizontalement
+            }, index * 100); // Délai pour chaque image
+        });
+
         setTimeout(() => {
-            img.style.opacity = 1; // Afficher l'image
-            img.style.transform = `translate(-50%, -50%) scale(1)`; // Appliquer l'effet de zoom
-            img.style.top = `${positions[index].top}px`;
-            img.style.left = `${positions[index].left}px`;
-        }, index * 100); // Délai pour chaque image
-    });
+            linkbag.style.display = 'none'; // Masquer le conteneur des images après l'animation
+        }, images.length * 100 + 500); // Attendre que toutes les animations soient terminées
+    }
+
+    imagesVisible = !imagesVisible;
 });
