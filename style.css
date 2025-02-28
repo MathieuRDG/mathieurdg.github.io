@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Jomhuria';
+    src: url('fonts/Jomhuria.ttf') format('truetype');
+}
+
+.titre1 {
+    text-align: center;
+    margin-top: 30%;
+    font-size: 50px;
+    font-family: 'Jomhuria', sans-serif; /* Appliquer la police importée */
+    line-height: 120%;
+}
+
+.bag1 {
+    display: flex;
+    margin: auto;
+    width: 30%;
+    margin-top: 40%;
+}
