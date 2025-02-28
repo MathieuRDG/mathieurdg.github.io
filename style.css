@@ -8,7 +8,7 @@
     margin-top: 30%;
     font-size: 50px;
     font-family: 'Jomhuria', sans-serif;
-    line-height: 0.6;
+    line-height: 1.2;
 }
 
 .bag1 {
@@ -16,6 +16,19 @@
     margin: auto;
     width: 30%;
     margin-top: 40%;
+    transform: scale(0.7); /* Réduire la taille initiale de 30% */
     transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
-    margin-bottom: 15%;
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+}
+
+.linkbag {
+    position: relative;
+    display: none; /* Masquer les images au départ */
+}
+
+.presentation1 img {
+    position: absolute;
+    width: 10%; /* Ajustez la taille des images selon vos besoins */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0; /* Masquer les images au départ */
 }
