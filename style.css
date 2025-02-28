@@ -7,8 +7,8 @@
     text-align: center;
     margin-top: 30%;
     font-size: 50px;
-    font-family: 'Jomhuria', sans-serif; /* Appliquer la police importée */
-    line-height: 120%;
+    font-family: 'Jomhuria', sans-serif;
+    line-height: 0.6;
 }
 
 .bag1 {
@@ -16,4 +16,6 @@
     margin: auto;
     width: 30%;
     margin-top: 40%;
+    transition: transform 0.3s ease; /* Transition pour l'effet de zoom */
+    margin-bottom: 15%;
 }
