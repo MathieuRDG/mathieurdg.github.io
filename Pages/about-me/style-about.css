@@ -1,0 +1,37 @@
+body {
+    background-color: #FFDBDB;
+}
+
+.image-top-left {
+    position: absolute;
+    top: -12%;
+    left: -4%;
+    transform: rotateX(15deg);
+    margin: 0px;
+    width: 25%;
+    animation: swing 3s infinite ease-in-out;
+}
+
+@keyframes swing {
+    0% { transform: rotate(-15deg) translateX(0); }
+    50% { transform: rotate(-15deg) translateX(10px); }
+    100% { transform: rotate(-15deg) translateX(0); }
+}
+
+/* Styles pour les écrans de taille moyenne */
+@media (min-width: 768px) {
+    .image-top-left {
+        top: -10%;
+        left: -3%;
+        width: 20%;
+    }
+}
+
+/* Styles pour les écrans de grande taille */
+@media (min-width: 1024px) {
+    .image-top-left {
+        top: -8%;
+        left: -2%;
+        width: 15%;
+    }
+}
