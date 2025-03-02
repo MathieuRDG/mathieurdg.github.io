@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body {
+    background: #FFDBDB;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: lowercase;
+    color: black;
+    line-height: 1.2;
+}
+
+
+.cursor {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s linear;
+    mix-blend-mode: difference;
+    z-index: 10;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black; /* Ou toute autre couleur souhaitée */
+    text-decoration: none;
+}
+
