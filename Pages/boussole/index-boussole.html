@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes perspectives professionnelles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../img/my-notion-face-transparent.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="style-boussole.css">
+    <script src="script-boussole.js"></script>
+</head>
+<body>
+    <div class="x-container">
+        <a href="../../index.html">
+            <div class="x"></div>
+        </a>
+    </div>
+   <h1> Mes perspectives professionnelles</h1>
+    
+    <div class="texte-communication">
+        <p>
+            La communication m’attire sous différentes formes, mais deux chemins se dessinent pour moi : travailler dans la communication du cinéma ou dans celle de la mode. Deux univers qui me passionnent et dans lesquels j’aimerais évoluer. Que ce soit en mettant en valeur un film ou en façonnant l’image d’un magazine de mode, mon objectif est d’allier créativité et stratégie pour donner vie à des projets qui me ressemblent.
+        </p>
+    </div>
+    <div class="image-container">
+        <img src="../../img/Fiche film _ L'Amour ouf (2024) - Fiches Films - DigitalCiné.jpg" alt="Projet 1" class="image-gauche" onclick="openMacWindow('../../img/Agence de communication.png')">
+        <img src="../../img/Plan de travail 1.png" alt="Projet 2" class="image-droite" onclick="openMacWindow('../../img/Agence de communication (1).png')">
+    </div>
+    <div class="mac-window" id="macWindow">
+        <div class="mac-header" onmousedown="startDrag(event)">
+            <div class="circle red" onclick="closeMacWindow()"></div>
+            <div class="circle yellow"></div>
+            <div class="circle green"></div>
+        </div>
+        <div class="mac-content">
+            <img id="macImage" src="" alt="">
+        </div>
+    </div>
+   
+</body>
+</html>

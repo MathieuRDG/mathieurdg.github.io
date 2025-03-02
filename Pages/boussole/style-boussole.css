@@ -1,0 +1,206 @@
+body {
+    font-family: 'Jomhuria', sans-serif;
+    background-color: #FFDBDB;
+    margin: 0;
+    padding: 2%;
+}
+h1 {
+    font-size: 8.5vw;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-bottom: 0%;
+    letter-spacing:0.09cm;
+}
+.x-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFDBDB;
+}
+.x {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+}
+.x::before, .x::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    transform: translateX(-50%) rotate(45deg);
+}
+.x::after {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.image-container {
+display: flex;
+justify-content: center;
+align-items: center; /* Assure l'alignement vertical */
+flex-wrap: wrap;
+gap: 5%;
+padding: 10px; /* Ajoute un peu d'espace autour des images sur petit écran */
+margin-left: 8%;
+}
+
+/* Ciblage de l'image de gauche */
+.image-container .image-gauche {
+width: 100%; /* L'image de gauche prend toute la largeur disponible dans son conteneur */
+max-width: 200px; /* Limite la largeur maximale pour ne pas devenir trop grande */
+height: auto; /* Ajuste la hauteur automatiquement en fonction de la largeur */
+}
+
+/* Ciblage de l'image de droite */
+.image-container .image-droite {
+max-width: 650px; /* Limite la largeur de l'image de droite */
+margin-top: 10px; /* Décale l'image de droite légèrement vers le bas */
+}
+
+.image-container img {
+width: 100%; /* Utilise 100% de l'espace disponible */
+height: auto; /* Laisse la hauteur s'ajuster proportionnellement */
+object-fit: cover; /* Maintient le recadrage pour éviter l'écrasement */
+cursor: pointer;
+transition: transform 0.3s;
+margin-top: -3%;
+}
+
+/* Media queries pour rendre le layout responsive */
+@media (max-width: 1200px) {
+.image-container img {
+max-width: 400px; /* Réduit la taille des images pour les écrans moyens */
+}
+}
+
+@media (max-width: 900px) {
+.image-container img {
+max-width: 300px; /* Réduit encore les images pour les écrans plus petits */
+}
+}
+
+@media (max-width: 600px) {
+.image-container img {
+max-width: 90%; /* Réduit la taille des images à 90% pour les petits écrans */
+}
+}
+
+
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.mac-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 85%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    resize: both;
+    overflow: hidden;
+}
+
+.mac-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #ddd;
+    padding: 1%;
+    border-radius: 10px 10px 0 0;
+    cursor: grab;
+}
+
+.mac-header .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.red { background: red; cursor: pointer; }
+.yellow { background: yellow; }
+.green { background: green; }
+
+.mac-content {
+    padding: 5%;
+    text-align: center;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mac-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 8vw;
+        text-align: center;
+        margin-right: 0;
+    }
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container img {
+        width: 60%;
+        max-width: 200px;
+    }
+    .mac-window {
+        width: 95%;
+        height: 95%;
+    }
+}
+
+/* Styles pour le texte */
+.texte-communication {
+    font-family: 'Jomhuria', sans-serif; /* Assure-toi que cette police est définie si elle est déjà présente dans ton projet */
+    font-size: 38px; /* Taille du texte par défaut */
+    color: black; /* Couleur du texte */
+    padding: 20px;
+    text-align: center; /* Justifie le texte */
+    line-height: 1; /* Espacement entre les lignes pour améliorer la lisibilité */
+    margin-top: -5%;
+    margin-left: -1%;
+}
+
+/* Media query pour les écrans de moins de 1200px */
+@media (max-width: 1200px) {
+    .texte-communication {
+        font-size: 35px; /* Réduit la taille du texte pour les grands écrans moyens */
+    }
+}
+
+/* Media query pour les écrans de moins de 900px */
+@media (max-width: 900px) {
+    .texte-communication {
+        font-size: 30px; /* Réduit davantage la taille du texte pour les écrans de taille moyenne */
+        margin-top: 0%; /* Supprime la marge haute pour que le texte soit mieux centré */
+    }
+}
+
+/* Media query pour les écrans de moins de 600px */
+@media (max-width: 600px) {
+    .texte-communication {
+        font-size: 24px; /* Réduit la taille du texte pour les petits écrans */
+        padding: 15px; /* Réduit le padding pour plus d'espace sur petit écran */
+        margin-left: 0%; /* Annule la marge gauche pour centrer le texte */
+    }
+}
