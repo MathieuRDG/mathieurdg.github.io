@@ -72,7 +72,7 @@ body {
 .content-box {
     position: relative;
     width: 43%;
-    bottom: 45%;
+    bottom: 33%;
     left: 49%;
     font-family: 'Jomhuria', sans-serif;
     font-size: 3em;
@@ -83,7 +83,7 @@ body {
     margin: 0%;
     font-size: 3.5em;
     padding: 0%;
-    height: 24%;
+    height: 1em;
 }
 
 .content-box .texte1 {
@@ -110,10 +110,10 @@ body {
 .text1 {
     font-family: 'Jomhuria', sans-serif;
     position: absolute;
-    bottom: 5%;
+    top: 115%;
     left: 15%;
     margin: 0.1%;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .eticket {
@@ -126,6 +126,33 @@ body {
 
 .ticket1 {
     height: 70em;
+}
+
+.btn-menu { 
+    position: relative;
+    top: 120%;
+}
+
+.btn-retour {
+    display: block;
+    margin: 50px auto; /* Centre horizontalement */
+    padding: 15px 30px;
+    font-size: 30px;
+    font-family: 'Jomhuria', sans-serif;
+    color: #FFDBDB;
+    background-color: white;
+    border: 5px solid #FFDBDB;
+    border-radius: 25px; /* Arrondi les bords */
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+.btn-retour:hover {
+    background-color: #FFDBDB;
+    color: white;
 }
 
 /* Styles pour les écrans de taille moyenne */
@@ -219,7 +246,7 @@ body {
     }
 
     .text1 {
-        font-size: 2em;
+        font-size: 3em;
         left: 15%;
     }
 
